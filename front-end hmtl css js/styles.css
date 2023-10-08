@@ -8,6 +8,7 @@
   --bg-color: #00b0ff;
   --btn-bg: #47a7f5;
   --btn-bg-ripple: #6eb9f7;
+  --green: #76ff03;
 }
 
 html {
@@ -38,20 +39,26 @@ html {
 
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   border-radius: 50px;
-  padding: 20px;
+  padding: 30px 20px 20px 20px;
 }
 
 .content .login-form .form {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 
   height: 100%;
 }
 
 .content .login-form .form .input-wrapper {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.content .login-form .form .input-wrapper.active .label {
+  top: -10px;
+  left: 10px;
+  font-size: 1.4rem;
 }
 
 .content .login-form .form .input-wrapper .label {
@@ -74,20 +81,13 @@ html {
   width: 100%;
 }
 
-.content .login-form .form .input-wrapper .input:focus + .label,
-.content .login-form .form .input-wrapper .input:valid + .label {
-  top: -10px;
-  left: 10px;
-  font-size: 1.4rem;
-}
-
 .content .login-form .form .input-name,
 .content .login-form .form .input-lastname,
 .content .login-form .form .input-email {
   /* background-color: red; */
 }
 
-.content .login-form .form .btn {
+.btn {
   border: none;
   border-radius: 2px;
   padding: 12px 18px;
@@ -98,17 +98,28 @@ html {
   background-color: #2196f3;
   box-shadow: 0 0 4px #999;
   outline: none;
+  margin-top: auto;
+  margin-bottom: 20px;
 
   background-position: center;
   transition: background 0.8s;
 }
-.content .login-form .form .btn:hover {
+.btn:hover {
   background: var(--btn-bg)
     radial-gradient(circle, transparent 1%, var(--btn-bg) 1%) center/15000%;
 }
 
-.content .login-form .form .btn:active {
+.btn:active {
   background-color: var(--btn-bg-ripple);
   background-size: 100%;
   transition: background 0s;
+}
+
+.dialog.success {
+  background-color: var(--green);
+}
+
+.dialog .btn {
+  margin-bottom: unset;
+  width: 100%;
 }

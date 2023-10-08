@@ -11,17 +11,17 @@
       <div class="login-form">
         <form method="post" class="form">
           <div class="input-wrapper">
-            <input class="input" type="text" id="name" required />
+            <input class="input" type="text" id="name" />
             <label class="label" for="name">Imię</label>
           </div>
 
           <div class="input-wrapper">
-            <input class="input" type="text" id="lastname" required />
+            <input class="input" type="text" id="lastname" />
             <label class="label" for="lastname">Nazwisko</label>
           </div>
 
           <div class="input-wrapper">
-            <input class="input" type="email" id="email" required />
+            <input class="input" type="email" id="email" />
             <label class="label" for="email">E-mail</label>
           </div>
 
@@ -29,6 +29,12 @@
         </form>
       </div>
     </div>
+
+    <dialog class="dialog">
+      <p class="dialog-msg"></p>
+
+      <button formmethod="dialog" class="btn">Zamknij</button>
+    </dialog>
 
     <script src="script.js"></script>
   </body>
