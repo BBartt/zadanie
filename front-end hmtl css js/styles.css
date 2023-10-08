@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --bg-color: #00b0ff;
+  --btn-bg: #47a7f5;
+  --btn-bg-ripple: #6eb9f7;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--bg-color);
+  font-size: 1.6rem;
+}
+
+.content {
+}
+
+.content .login-form {
+  height: 50vh;
+  width: 50vw;
+  background-color: var(--white);
+  background-color: 10%;
+
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 50px;
+  padding: 20px;
+}
+
+.content .login-form .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  height: 100%;
+}
+
+.content .login-form .form .input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.content .login-form .form .input-wrapper .label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+
+  padding: 2px 2px;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  background-color: var(--white);
+}
+
+.content .login-form .form .input-wrapper .input {
+  border: 1px solid var(--black);
+  border-radius: 6px;
+  padding: 4px 6px 4px 10px;
+  font-size: 1.8rem;
+  height: 40px;
+  width: 100%;
+}
+
+.content .login-form .form .input-wrapper .input:focus + .label,
+.content .login-form .form .input-wrapper .input:valid + .label {
+  top: -10px;
+  left: 10px;
+  font-size: 1.4rem;
+}
+
+.content .login-form .form .input-name,
+.content .login-form .form .input-lastname,
+.content .login-form .form .input-email {
+  /* background-color: red; */
+}
+
+.content .login-form .form .btn {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background-color: #2196f3;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+
+  background-position: center;
+  transition: background 0.8s;
+}
+.content .login-form .form .btn:hover {
+  background: var(--btn-bg)
+    radial-gradient(circle, transparent 1%, var(--btn-bg) 1%) center/15000%;
+}
+
+.content .login-form .form .btn:active {
+  background-color: var(--btn-bg-ripple);
+  background-size: 100%;
+  transition: background 0s;
+}

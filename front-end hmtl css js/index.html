@@ -4,17 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML / CSS / JAVASCRIPT</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="body">
     <div class="content">
       <div class="login-form">
         <form method="post" class="form">
-          <input type="text" placeholder="Imię" />
-          <input type="text" placeholder="Nazwisko" />
-          <input type="email" placeholder="E-mail" />
+          <div class="input-wrapper">
+            <input class="input" type="text" id="name" required />
+            <label class="label" for="name">Imię</label>
+          </div>
 
-          <button>Wyślij</button>
+          <div class="input-wrapper">
+            <input class="input" type="text" id="lastname" required />
+            <label class="label" for="lastname">Nazwisko</label>
+          </div>
+
+          <div class="input-wrapper">
+            <input class="input" type="email" id="email" required />
+            <label class="label" for="email">E-mail</label>
+          </div>
+
+          <button class="btn">Wyślij</button>
         </form>
       </div>
     </div>
